@@ -103,7 +103,7 @@ class ScriptTag extends Component {
         });
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         // This logic assumes that the <script> only need to be updated if the 'src' or 'innerHTML' has changed
         //  - this prevents the <script> from updating unnecessarily, which prevents additional 'onload' events
 
@@ -131,7 +131,7 @@ class ScriptTag extends Component {
         });
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         ScriptTag.removeNode(nextState.removeAdditionalNode);
     }
 
